@@ -24,5 +24,5 @@ This repository contains a project developed to automate the extraction and stor
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/your-username/nc-program-data-extraction.git
+   git clone https://github.com/shvynu/nc-program-data-extraction.git
    cd nc-program-data-extraction
