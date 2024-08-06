@@ -5,7 +5,7 @@ import re
 from io import StringIO
 from datetime import datetime
 
-# Database Parameter
+
 server = 'DESKTOP-I348G7M69\\SQLEXPRESS'
 database = 'MeasurementDB'
 table_name = 'BladeMeasurementDeviations'
@@ -37,14 +37,14 @@ def extract_data(file, nc_file):
             # Append the extracted deviation to the list
             blade_data["MeasurementDeviations"].append(measurement_deviation)
     
-    # Fill up to 24 points if fewer deviations are present
+    # append measurmentdeviation to bladedata
     while len(blade_data["MeasurementDeviations"]) < 24:
         blade_data["MeasurementDeviations"].append(0.0)
 
     return blade_data
 
 def transform_data(blade_data):
-    # Flatten the blade data into a single row, only deviations are needed
+    
     row_data = [
         blade_data["BladeNumber"],
         blade_data["Timestamp"],
